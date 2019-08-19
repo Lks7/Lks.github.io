@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>git命令 | Lks</title><meta name="description" content="git命令"><meta name="keywords" content="git"><meta name="author" content="Lks"><meta name="copyright" content="Lks"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="https://Lks7.github.io/2019/08/19/git命令/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="git命令"><meta name="twitter:description" content="git命令"><meta name="twitter:image" content="https://Lks7.github.io/img/avatar.png"><meta property="og:type" content="article"><meta property="og:title" content="git命令"><meta property="og:url" content="https://Lks7.github.io/2019/08/19/git命令/"><meta property="og:site_name" content="Lks"><meta property="og:description" content="git命令"><meta property="og:image" content="https://Lks7.github.io/img/avatar.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="git使用" href="https://Lks7.github.io/2019/08/19/git使用/"><link rel="next" title="高并发" href="https://Lks7.github.io/2019/08/16/高并发/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://Lks7.github.io/","msgToTraditionalChinese":"简","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天'
+
+  
+}</script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://w.wallhaven.cc/full/md/wallhaven-md96y9.jpg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">Lks</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"><div class="mobile_author-info__description"></div></div><hr><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a><a class="site-page" href="/messageboard/"><i class="fa-fw fa false"></i><span> 给我留言</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">git命令</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-08-19<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-08-19</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/技术/">技术</a></span></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><p>1）git help <command> # 显示command的help</p>
+<p>2）git show # 显示某次提交的内容 git show $id</p>
+<p>3）git co – <file> # 抛弃工作区修改</file></p>
+<p>4）git co . # 抛弃工作区修改</p>
+<p>5）git add <file> # 将工作文件修改提交到本地暂存区</file></p>
+<p>6）git add . # 将所有修改过的工作文件提交暂存区</p>
+<p>7）git rm <file> # 从版本库中删除文件</file></p>
+<p>8）git rm <file> –cached # 从版本库中删除文件，但不删除文件</file></p>
+<p>9）git reset <file> # 从暂存区恢复到工作文件</file></p>
+<p>10）git reset – . # 从暂存区恢复到工作文件</p>
+<p>11）git reset –hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</p>
+<p>12）git ci <file> git ci . git ci -a # 将git add, git rm和git ci等操作都合并在一起做　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　git ci -am “some comments”</file></p>
+<p>13）git ci –amend # 修改最后一次提交记录</p>
+<p>14）git revert &lt;$id&gt; # 恢复某次提交的状态，恢复动作本身也创建次提交对象</p>
+<p>15）git revert HEAD # 恢复最后一次提交的状态</p>
+<p>16）git diff <file> # 比较当前文件和暂存区文件差异 git diff</file></p>
+<p>17）git diff <id1><id1><id2> # 比较两次提交之间的差异</id2></id1></id1></p>
+<p>18）git diff <branch1>..<branch2> # 在两个分支之间比较</branch2></branch1></p>
+<p>19）git diff –staged # 比较暂存区和版本库差异</p>
+<p>20）git diff –stat # 仅仅比较统计信息</p>
+<p>21）git log git log <file> # 查看该文件每次提交记录</file></p>
+<p>22）git log -p <file> # 查看每次详细修改内容的diff</file></p>
+<p>23）git log -p -2 # 查看最近两次详细修改内容的diff</p>
+<p>24）git log –stat #查看提交统计信息</p>
+<p>25）git br -r # 查看远程分支</p>
+<p>26）git br <new_branch> # 创建新的分支</new_branch></p>
+<p>27）git br -v # 查看各个分支最后提交信息</p>
+<p>28）git br –merged # 查看已经被合并到当前分支的分支</p>
+<p>29）git br –no-merged # 查看尚未被合并到当前分支的分支</p>
+<p>30）git co <branch> # 切换到某个分支</branch></p>
+<p>31）git co -b <new_branch> # 创建新的分支，并且切换过去</new_branch></p>
+<p>32）git co -b <new_branch> <branch> # 基于branch创建新的new_branch</branch></new_branch></p>
+<p>33）git co $id # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除</p>
+<p>34）git co $id -b <new_branch> # 把某次历史提交记录checkout出来，创建成一个分支</new_branch></p>
+<p>35）git br -d <branch> # 删除某个分支</branch></p>
+<p>36）git br -D <branch> # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</branch></p>
+<p>37）git merge <branch> # 将branch分支合并到当前分支</branch></p>
+<p>38）git merge origin/master –no-ff # 不要Fast-Foward合并，这样可以生成merge提交</p>
+<p>39）git diff &gt; ../sync.patch # 生成补丁</p>
+<p>40）git apply ../sync.patch # 打补丁</p>
+<p>41）git apply –check ../sync.patch #测试补丁能否成功</p>
+<p>42）git stash # 暂存</p>
+<p>43）git stash list # 列出所有stash</p>
+<p>44）git stash apply # 恢复暂存的内容</p>
+<p>45）git stash drop # 删除暂存区</p>
+<p>46）git pull # 抓取远程仓库所有分支更新并合并到本地</p>
+<p>47）git pull –no-ff # 抓取远程仓库所有分支更新并合并到本地，不要快进合并</p>
+<p>48）git fetch origin # 抓取远程仓库更新</p>
+<p>49）git merge origin/master # 将远程主分支合并到本地当前分支</p>
+<p>50）git co –track origin/branch # 跟踪某个远程分支创建相应的本地分支</p>
+<p>51）git co -b <local_branch> origin/<remote_branch> # 基于远程分支创建本地分支，功能同上</remote_branch></local_branch></p>
+<p>52）git push # push所有分支</p>
+<p>53）git push origin master # 将本地主分支推到远程主分支</p>
+<p>54）git push -u origin master # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)</p>
+<p>55）git push origin <local_branch> # 创建远程分支， origin是远程仓库名</local_branch></p>
+<p>56）git push origin <local_branch>:<remote_branch> # 创建远程分支</remote_branch></local_branch></p>
+<p>57）git push origin :<remote_branch> #先删除本地分支(git br -d <branch>)，然后再push删除远程分支</branch></remote_branch></p>
+<p>58）git remote -v # 查看远程服务器地址和仓库名称</p>
+<p>59）git remote show origin # 查看远程服务器仓库状态</p>
+<p>60）git remote add origin git@ github:robbin/robbin_site.git # 添加远程仓库地址</p>
+<p>61）git remote set-url origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址) git remote rm <repository> # 删除远程仓库</repository></p>
+<p>62）git clone –bare robbin_site robbin_site.git # 用带版本的项目创建纯版本仓库</p>
+<p>63）scp -r my_project.git git@ git.csdn.net:~ # 将纯仓库上传到服务器上</p>
+<p>64）mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git –bare init # 在服务器创建纯仓库</p>
+<p>65）git remote add origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址</p>
+<p>66) git push -u origin master # 客户端首次提交</p>
+<p>67) git push -u origin develop # 首次将本地develop分支提交到远程develop分支，并且track</p>
+<p>68) git remote set-head origin master # 设置远程仓库的HEAD指向master分支</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lks</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://Lks7.github.io/2019/08/19/git命令/">https://Lks7.github.io/2019/08/19/git命令/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://Lks7.github.io">Lks</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/git/">git    </a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/2019/08/19/git使用/"><img class="prev_cover lozad" data-src="https://w.wallhaven.cc/full/2k/wallhaven-2kkzwg.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>git使用</span></div></a></div><div class="next-post pull-right"><a href="/2019/08/16/高并发/"><img class="next_cover lozad" data-src="https://w.wallhaven.cc/full/2k/wallhaven-2kkzwg.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>高并发</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/08/19/git使用/" title="git使用"><img class="relatedPosts_cover lozad" data-src="https://w.wallhaven.cc/full/2k/wallhaven-2kkzwg.jpg"><div class="relatedPosts_title">git使用</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NjEwNi8yMjYxNw=="><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By Lks</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">简</a><i class="fa fa-moon-o nightshift" id="nightshift" title="夜间模式"></i></section><div id="post_bottom"><div id="post_bottom_items"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">目录</div></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/js/piao.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script></body></html>
